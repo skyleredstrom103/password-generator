@@ -9,13 +9,9 @@ nr_letters= int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-# randomly choose the chosen amount of letters
+# randomly choose the chosen amount of letters, symbols and numbers
 random_letters_list = random.choices(letters, k = nr_letters)
-
-# randomly choose the chosen amount of symbols
 random_symbols_list = random.choices(symbols, k = nr_symbols)
-
-# randomly choose the chosen amount of numbers
 random_numbers_list = random.choices(numbers, k = nr_numbers)
 
 # combine the characters into a list
