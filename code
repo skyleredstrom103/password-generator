@@ -9,20 +9,23 @@ nr_letters= int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
+# randomly choose the chosen amount of letters
 random_letters_list = random.choices(letters, k = nr_letters)
-random_letters = ''.join(random_letters_list)
-str_password = random_letters
 
+# randomly choose the chosen amount of symbols
 random_symbols_list = random.choices(symbols, k = nr_symbols)
-random_symbols = ''.join(random_symbols_list)
-str_password += random_symbols
 
+# randomly choose the chosen amount of numbers
 random_numbers_list = random.choices(numbers, k = nr_numbers)
-random_numbers = ''.join(random_numbers_list)
-password = random_numbers
 
-combined_password = str_password + str(password)
+# combine the characters into a list
+combined_password = random_letters_list + random_symbols_list + random_numbers_list
+
+# randomize the list
 randomized_password_list = random.sample(combined_password, len(combined_password))
+
+# combine the list into a string
 randomized_password = ''.join(randomized_password_list)
 
+# print the randomized password
 print(f"Here is your password: {randomized_password}")
